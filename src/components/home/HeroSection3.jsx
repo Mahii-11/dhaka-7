@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { Button } from "../ui/button";
 import { useEffect, useState } from "react";
 import { getTopSection } from "../../services/api";
-import heroBg from "../../assets/thumbnails/ziaimagebg-1.jpg";
+import heroBg from "../../assets/thumbnails/tariqueimagebg-4.jpg";
 import { ArrowRight } from "lucide-react";
 
 const containerVariants = {

@@ -41,7 +41,7 @@ export function Navbar() {
           >
             <div className="flex items-center gap-2 md:gap-4 mr-4 md:mr-8">
               <img
-                src="/images/ziaimage-3.jpg"
+                src="/images/tariqueimage-8.jpg"
                 alt="Campaign Logo"
                 className="h-14 w-14 rounded-full shadow-lg hover:scale-105 transition-transform
                  object-cover object-top

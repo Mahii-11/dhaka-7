@@ -123,7 +123,7 @@ export default function About() {
                 transition={{ duration: 0.5 }}
               >
                 <img
-                  src="images/ziaimage-4.jpg"
+                  src="images/tariqueimage-8.jpg"
                   alt="Team Meeting"
                   className="rounded-lg shadow-xl w-full"
                 />
