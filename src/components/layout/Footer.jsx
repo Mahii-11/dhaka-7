@@ -57,7 +57,7 @@ export function Footer() {
                 hover:drop-shadow-[0_6px_18px_rgba(0,0,0,0.25)]"
                 />
                 <div className="text-2xl md:text-3xl font-extrabold tracking-tight  text-green-700 font-bangla">
-                  জিয়াউর <span className="text-political-red">রহমান</span>
+                  তারেক <span className="text-political-red">রহমান</span>
                 </div>
               </div>
               <p className="text-gray-950 text-sm leading-relaxed mb-6">
@@ -166,7 +166,7 @@ export function Footer() {
           {/* Footer Bottom */}
           <div className="border-t border-gray-200/50 mt-10 pt-6">
             <div className="flex flex-col md:flex-row items-center justify-center gap-4 text-sm text-gray-600">
-              <p>© 2025 Hamidur Rahman Hamid</p>
+              <p>© 2025 Tarique Rahman</p>
             </div>
           </div>
         </div>

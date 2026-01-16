@@ -272,7 +272,7 @@ export default function Campaign() {
             মাধ্যমেই জনগণের সামনে তুলে ধরবো।”
           </motion.blockquote>
 
-          <p className="mt-6 text-gray-600">— আপনার বিশ্বস্ত প্রার্থী</p>
+          <p className="mt-6 text-gray-600">— তারেক রহমান</p>
         </section>
 
         <section className="py-20 bg-political-light">

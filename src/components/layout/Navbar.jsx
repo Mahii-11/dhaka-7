@@ -50,7 +50,7 @@ export function Navbar() {
 
               <div className="flex flex-col justify-center mt-4">
                 <div className="text-green-700 font-extrabold md:text-3xl text-2xl tracking-wider leading-tight font-bangla">
-                  জিয়াউর<span className="text-political-red">রহমান</span>
+                  তারেক<span className="text-political-red">রহমান</span>
                 </div>
               </div>
 

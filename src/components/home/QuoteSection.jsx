@@ -50,7 +50,8 @@ export function QuoteSection() {
 
               <div className="mt-8 flex items-center justify-center gap-4">
                 <div className="w-12 h-0.5 bg-gray-900" />
-                <p className="text-gray-800 text-lg">{item.title}</p>
+              {/*<p className="text-gray-800 text-lg">{item.title}</p>*/}
+              <p className="text-gray-800 text-lg">তারেক রহমান</p>
                 <div className="w-12 h-0.5 bg-gray-900" />
               </div>
             </motion.div>
