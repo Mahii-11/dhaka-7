@@ -4,16 +4,19 @@ import { Navbar } from "../components/layout/Navbar";
 import { Footer } from "../components/layout/Footer";
 import { Button } from "../components/ui/button";
 import { useEffect, useState } from "react";
+import { Card, CardContent } from "@/components/ui/card";
+import {  FaRegCalendarAlt } from "react-icons/fa";
+import { FaPlayCircle, FaTimes } from "react-icons/fa";
 import { X } from "lucide-react";
-import { getGallery } from "@/services/api";
+//import { getGallery } from "@/services/api";
 
 const categories = ["সকল", "মিছিল", "মিটিং", "কমিউনিটি", "ইভেন্ট"];
 
-const videos = [
+/* const videos = [
   {
     title: "জনসভায় গুরুত্বপূর্ণ বক্তব্য",
     description: "জনগণের অধিকার ও উন্নয়ন নিয়ে আমাদের সাম্প্রতিক জনসভা।",
-    src: "/videos/hamidvideo.mp4",
+    src: "",
     poster: "/images/image3.jpg",
   },
   {
@@ -28,15 +31,97 @@ const videos = [
     src: "/videos/css-animations.mp4",
     poster: "/images/image5.jpg",
   },
+];  */
+
+const videos = [
+   {
+    id: 1,
+    title: "উন্নয়ন প্রকল্প পরিদর্শন",
+    description: "চলমান উন্নয়ন প্রকল্প সরেজমিনে পরিদর্শনের দৃশ্য।",
+    src: "https://www.youtube.com/embed/QmAQQH7To7w",
+    type: "youtube",
+    date: "১০ জানুয়ারি ২০২6",
+    thumbnail: "/images/thu-1.jpg",
+  },
+  {
+    id: 2,
+    title: "উন্নয়ন প্রকল্প পরিদর্শন",
+    description: "চলমান উন্নয়ন প্রকল্প সরেজমিনে পরিদর্শনের দৃশ্য।",
+    src: "https://www.youtube.com/embed/VUvAkk-D8WE",
+    type: "youtube",
+    date: "১০ জানুয়ারি ২০২6",
+    thumbnail: "/images/thu-2.jpg",
+  },
+  {
+    id: 2,
+    title: "উন্নয়ন প্রকল্প পরিদর্শন",
+    description: "চলমান উন্নয়ন প্রকল্প সরেজমিনে পরিদর্শনের দৃশ্য।",
+    src: "https://www.youtube.com/embed/RWYweOD4A1E",
+    type: "youtube",
+    date: "১০ জানুয়ারি ২০২6",
+    thumbnail: "/images/thu3.jpg",
+  },
 ];
+
+
+
+const galleryImages = [
+  {
+    id: 8,
+    category: "হোম",
+    image: "/images/image-1.jpg",
+  },
+  {
+    id: 9,
+    category: "হোম",
+    image: "/images/image-2.jpg",
+  },
+  {
+    id: 10,
+    category: "হোম",
+    image: "/images/image-3.jpg",
+  },
+  {
+    id: 11,
+    category: "হোম",
+    image: "/images/image-4.jpg",
+  },
+  {
+    id: 12,
+    category: "হোম",
+    image: "/images/image-5.jpg",
+  },
+  {
+    id: 13,
+    category: "হোম",
+    image: "/images/image-6.jpg",
+  },
+  {
+    id: 14,
+    category: "মিটিং",
+    image: "/images/image-1.jpg",
+  },
+  {
+    id: 15,
+    category: "মিটিং",
+    image: "/images/image-2.jpg",
+  },
+];
+
+
+
 
 export default function Gallery() {
   const [activeCategory, setActiveCategory] = useState("সকল");
   const [selectedImage, setSelectedImage] = useState(null);
-  const [galleryImages, setGalleryImages] = useState([]);
+ // const [galleryImages, setGalleryImages] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
+
+  {
+    /*
+
+     useEffect(() => {
     async function loadGallery() {
       try {
         const data = await getGallery();
@@ -54,6 +139,12 @@ export default function Gallery() {
     }
     loadGallery();
   }, []);
+
+
+    */
+  }
+
+ 
 
   const filteredImages =
     activeCategory === "সকল"
@@ -177,7 +268,8 @@ export default function Gallery() {
           </div>
         </section>
       </main>
-      <VideoGallery />
+     {/*  <VideoGallery /> */}
+     <CampaignVideos/>
       <Footer />
 
       <AnimatePresence>
@@ -226,7 +318,122 @@ export default function Gallery() {
   );
 }
 
-function VideoGallery() {
+
+
+
+export function CampaignVideos() {
+  const [activeVideo, setActiveVideo] = useState(null);
+
+  return (
+    <section className="py-20 bg-political-light">
+      <div className="max-w-7xl mx-auto px-4 md:px-8">
+        {/* Video Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {videos.map((item, index) => (
+            <motion.div
+              key={item.id}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+            >
+              <Card
+                onClick={() => setActiveVideo(item)}
+                className="overflow-hidden hover-elevate cursor-pointer h-full bg-white border-0 shadow-sm"
+              >
+                {/* Thumbnail */}
+                <div className="relative h-48 overflow-hidden group">
+                  <img
+                    src={item.thumbnail}
+                    alt={item.title}
+                    className="w-full h-full object-cover"
+                  />
+
+                  <div className="absolute inset-0 flex items-center justify-center bg-black/30  group-hover:opacity-100 transition">
+                    <FaPlayCircle className="text-white text-6xl opacity-90" />
+                  </div>
+                </div>
+
+                {/* Content */}
+                <CardContent className="p-6">
+                  <h3 className="text-lg font-semibold text-green-900 mb-3 line-clamp-2 hover:text-political-red transition-colors">
+                    {item.title}
+                  </h3>
+
+                  <p className="text-sm text-political-dark/70 mb-4 line-clamp-2">
+                    {item.description}
+                  </p>
+
+                  <div className="flex items-center gap-2 text-sm text-political-dark/60">
+                    <FaRegCalendarAlt className="w-4 h-4" />
+                    {item.date}
+                  </div>
+                </CardContent>
+              </Card>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+
+      {/* Video Modal */}
+      <AnimatePresence>
+        {activeVideo && (
+          <motion.div
+            className="fixed inset-0 z-50 bg-black/70 flex items-center justify-center px-4"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => setActiveVideo(null)}
+          >
+            <motion.div
+              initial={{ scale: 0.9 }}
+              animate={{ scale: 1 }}
+              exit={{ scale: 0.9 }}
+              transition={{ duration: 0.3 }}
+              className="relative bg-black rounded-xl w-full max-w-4xl overflow-hidden"
+              onClick={(e) => e.stopPropagation()}
+            >
+              {/* Close Button */}
+              <button
+                onClick={() => setActiveVideo(null)}
+                className="absolute top-4 right-4 text-white text-xl z-10"
+              >
+                <FaTimes />
+              </button>
+
+              {/* Video */}
+              {activeVideo.type === "local" ? (
+                <video
+                  src={activeVideo.src}
+                  controls
+                  autoPlay
+                  className="w-full h-[70vh] object-contain bg-black"
+                />
+              ) : (
+                <iframe
+                  src={activeVideo.src}
+                  allow="autoplay; fullscreen"
+                  allowFullScreen
+                  className="w-full h-[70vh]"
+                />
+              )}
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </section>
+  );
+}
+
+
+
+
+{
+
+  /*
+
+
+   function VideoGallery() {
   return (
     <section className="w-full bg-gray-50 py-16">
       <div className="max-w-7xl mx-auto px-6">
@@ -264,4 +471,12 @@ function VideoGallery() {
       </div>
     </section>
   );
+}
+
+
+
+
+  */
+
+
 }

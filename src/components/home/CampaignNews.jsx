@@ -10,32 +10,32 @@ import { AnimatePresence } from "framer-motion";
 import { FaPlayCircle, FaTimes } from "react-icons/fa";
 
 const videos = [
-  {
+   {
     id: 1,
-    title: "জনসভায় গুরুত্বপূর্ণ বক্তব্য",
-    description: "জনগণের অধিকার ও উন্নয়ন নিয়ে আমাদের সাম্প্রতিক জনসভা।",
-    src: "/videos/video1.mp4",
-    type: "local",
-    date: "১২ জানুয়ারি ২০২6",
-    thumbnail: "/images/image34.jpg",
+    title: "উন্নয়ন প্রকল্প পরিদর্শন",
+    description: "চলমান উন্নয়ন প্রকল্প সরেজমিনে পরিদর্শনের দৃশ্য।",
+    src: "https://www.youtube.com/embed/QmAQQH7To7w",
+    type: "youtube",
+    date: "১০ জানুয়ারি ২০২6",
+    thumbnail: "/images/thu-1.jpg",
   },
   {
     id: 2,
     title: "উন্নয়ন প্রকল্প পরিদর্শন",
     description: "চলমান উন্নয়ন প্রকল্প সরেজমিনে পরিদর্শনের দৃশ্য।",
-    src: "https://www.youtube.com/embed/VIDEO_ID",
+    src: "https://www.youtube.com/embed/VUvAkk-D8WE",
     type: "youtube",
     date: "১০ জানুয়ারি ২০২6",
-    thumbnail: "/images/image1.jpg",
+    thumbnail: "/images/thu-2.jpg",
   },
   {
-    id: 3,
-    title: "স্বেচ্ছাসেবকদের সাথে মতবিনিময়",
-    description: "স্বেচ্ছাসেবকদের সাথে গুরুত্বপূর্ণ আলোচনা ও দিকনির্দেশনা।",
-    src: "/videos/video3.mp4",
-    type: "local",
-    date: "৮ জানুয়ারি ২০২6",
-    thumbnail: "/images/image23.jpg",
+    id: 2,
+    title: "উন্নয়ন প্রকল্প পরিদর্শন",
+    description: "চলমান উন্নয়ন প্রকল্প সরেজমিনে পরিদর্শনের দৃশ্য।",
+    src: "https://www.youtube.com/embed/RWYweOD4A1E",
+    type: "youtube",
+    date: "১০ জানুয়ারি ২০২6",
+    thumbnail: "/images/thu3.jpg",
   },
 ];
 

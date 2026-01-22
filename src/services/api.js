@@ -1,4 +1,4 @@
-import { string } from "zod";
+//import { string } from "zod";
 
 const API_BASE_URL = "https://election-backend.dotzpos.com/api";
 

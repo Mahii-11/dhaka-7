@@ -82,7 +82,7 @@ export default function Volunteer() {
               transition={{ delay: 0.1, duration: 0.5 }}
               className="mx-auto max-w-2xl text-base md:text-lg text-slate-600 leading-relaxed"
             >
-              উন্নত আগামী বিনির্মাণে, হামিদুর রহমান হামিদের নেতৃত্বে ঐক্যবদ্ধ
+              উন্নত আগামী বিনির্মাণে, তারেক রহমানের নেতৃত্বে ঐক্যবদ্ধ
               হোন!
             </motion.p>
           </div>
@@ -150,7 +150,7 @@ export default function Volunteer() {
                 transition={{ duration: 0.5 }}
               >
                 <h2 className="text-3xl font-bold text-red-800 mb-6">
-                  ঢাকা–৭ এর মানুষের পাশে{" "}
+                  ঢাকা–১৭ এর মানুষের পাশে{" "}
                   <span className="text-gray-800">
                     থাকতে আমাদের সাথে যুক্ত হন
                   </span>

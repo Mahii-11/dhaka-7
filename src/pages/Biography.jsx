@@ -5,8 +5,9 @@ import { Footer } from "../components/layout/Footer";
 import { Award, BookOpen, Heart, Users } from "lucide-react";
 import { Card, CardContent } from "../components/ui/card";
 import BiographySection from "../components/BiographySection";
-import { useEffect, useState } from "react";
-import { getBioData } from "@/services/api";
+//import { useEffect, useState } from "react";
+
+//import { getBioData } from "@/services/api";
 
 const achievementIconMap = {
   "নেতৃত্বে সম্মাননা": Award,
@@ -15,11 +16,93 @@ const achievementIconMap = {
   "মানবতার সেবক": Heart,
 };
 
-export default function Biography() {
-  const [lifeline, setLifeline] = useState([]);
-  const [achievements, setAchievements] = useState([]);
 
-  useEffect(() => {
+const lifeline = [
+  {
+    id: 1,
+    year: "১৯৬৫",
+    title: "জন্ম ও শৈশব",
+    description:
+      "২০ নভেম্বর জন্মগ্রহণ। শহীদ প্রেসিডেন্ট জিয়াউর রহমান ও বেগম খালেদা জিয়ার জ্যেষ্ঠ পুত্র হিসেবে বেড়ে ওঠা।",
+  },
+  {
+    id: 2,
+    year: "১৯৮৮",
+    title: "রাজনীতিতে আনুষ্ঠানিক প্রবেশ",
+    description:
+      "বাংলাদেশ জাতীয়তাবাদী দল (বিএনপি)-এ সক্রিয়ভাবে সম্পৃক্ততা শুরু।",
+  },
+  {
+    id: 3,
+    year: "১৯৯১–২০০১",
+    title: "রাজনৈতিক নেতৃত্বে উত্থান",
+    description:
+      "দলের সাংগঠনিক কাজে উল্লেখযোগ্য ভূমিকা, যুব ও তরুণদের সংগঠনে নতুন গতি ও শীলতা আনা।",
+  },
+  {
+    id: 4,
+    year: "২০০২–২০০৭",
+    title: "BNP-এর জ্যেষ্ঠ যুগ্ম মহাসচিব → সিনিয়র ভাইস-চেয়ারম্যান",
+    description:
+      "দলের নীতি নির্ধারণ, সাংগঠনিক সংস্কার, এবং নতুন রাজনৈতিক চিন্তার বিকাশ।",
+  },
+  {
+    id: 5,
+    year: "২০০৮–২০২৪",
+    title: "প্রবাসে থেকে দলের নেতৃত্ব",
+    description:
+      "লন্ডন থেকে দলের ভারপ্রাপ্ত চেয়ারম্যান হিসেবে বিশ্বব্যাপী (বিএনপি)-র পুনর্গঠন, নীতিগত নির্দেশনা ও কৌশলগত নেতৃত্ব।",
+  },
+  {
+    id: 6,
+    year: "২০২৫",
+    title: "বাংলাদেশে প্রত্যাবর্তন ও নতুন রাজনৈতিক অধ্যায়",
+    description:
+      "দেশে ফিরে জাতীয় রাজনীতিতে সক্রিয় অংশগ্রহণ। গণতন্ত্র পুনরুদ্ধার আন্দোলনে নেতৃত্ব।",
+  },
+
+   {  
+     id: 7,
+     year: "২০২৬",
+     title: "ঢাকা-১৭ সংসদীয় আসনে প্রতিদ্বন্দ্বিতা",
+     description:
+       "রাজনীতির নতুন যাত্রা—অংশগ্রহণমূলক গণতন্ত্র প্রতিষ্ঠার লক্ষ্য সামনে রেখে নির্বাচন।",
+   },
+];
+
+const achievements = [
+    {
+      "id": 2,
+      "name": "দলের নেতৃত্বে অনন্য ভূমিকা",
+      "description": "BNP-এর সাংগঠনিক পুনর্গঠন, নীতি নির্ধারণ ও তরুণ নেতৃত্বকে এগিয়ে নেওয়ার অসামান্য অবদানের জন্য দলীয় শীর্ষ পর্যায়ে স্বীকৃতি।"
+    },
+    {
+      "id": 3,
+      "name": "সমাজসেবায় অবদান",
+      "description": "দরিদ্র, সুবিধাবঞ্চিত ও দুর্যোগপ্রবণ মানুষের সহযোগিতায় দীর্ঘমেয়াদি ত্রাণ কার্যক্রম, স্বাস্থ্যসেবা উদ্যোগ ও শিক্ষা-সহায়তা কর্মসূচিতে বিশেষ ভূমিকা পালন।"
+    },
+    {
+      "id": 4,
+      "name": "নীতি নির্ধারণ ও রাজনৈতিক চিন্তার প্রবক্তা",
+      "description": "গণতন্ত্র, নির্বাচন ব্যবস্থার সংস্কার, অর্থনৈতিক উন্নয়ন এবং জনগণের অংশগ্রহণমূলক শাসনব্যবস্থা নিয়ে নীতিগত প্রস্তাবনা ও বক্তৃতার মাধ্যমে পরিচিত।"
+    },
+
+     {
+      "id": 5,
+      "name": "মানবতার সেবক",
+      "description": "স্বাধীনতা, গণতান্ত্রিক অধিকার, মানবাধিকার রক্ষা এবং জাতীয় সংকটসমূহে জনগণের পাশে দাঁড়ানোর ধারাবাহিকতা—যার জন্য তিনি দেশ-বিদেশে প্রশংসিত।"
+    }
+  ];
+
+export default function Biography() {
+ // const [lifeline, setLifeline] = useState([]);
+ // const [achievements, setAchievements] = useState([]);
+
+
+  {
+    /*
+
+       useEffect(() => {
     let isMounted = true;
 
     async function loadBiography() {
@@ -44,6 +127,10 @@ export default function Biography() {
     };
   }, []);
 
+
+    */
+  }
+
   const uiAchievements = achievements.map((item) => ({
     ...item,
     icon: achievementIconMap[item.name] || Award,
@@ -56,7 +143,6 @@ export default function Biography() {
         <section className="relative py-24 bg-gradient-to-b from-slate-50 via-white to-slate-50 overflow-hidden">
           <div className="absolute -top-24 left-1/2 -translate-x-1/2 h-72 w-72 rounded-full bg-emerald-200/40 blur-3xl" />
           <div className="absolute top-24 left-1/2 -translate-x-1/2 h-56 w-56 rounded-full bg-rose-300/25 blur-3xl" />
-
           <div className="relative z-10 max-w-6xl mx-auto px-4 md:px-8 text-center">
             <motion.div
               initial={{ opacity: 0, y: 24 }}
@@ -178,10 +264,10 @@ export default function Biography() {
                     <Card className="inline-block bg-white border-0 shadow-sm">
                       <CardContent className="p-6">
                         <span className="text-political-red font-bold text-xl">
-                          {item.title}
+                          {item.year}
                         </span>
                         <h3 className="text-lg font-semibold text-gray-800 mt-2">
-                          {item.sub_title}
+                          {item.title}
                         </h3>
                         <p className="text-political-dark/70 text-sm mt-2">
                           {item.description}

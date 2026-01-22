@@ -3,13 +3,48 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { Play } from "lucide-react";
 import { useEffect, useState } from "react";
-import { getGallery } from "@/services/api";
+//import { getGallery } from "@/services/api";
+
+
+const images = [
+  {
+    id: 1,
+    image: "/images/image-1.jpg",
+  },
+  {
+    id: 2,
+    image: "/images/image-2.jpg",
+  },
+  {
+    id: 3,
+    image: "/images/image-3.jpg",
+  },
+  {
+    id: 4,
+    image: "/images/image-4.jpg",
+  },
+  {
+    id: 5,
+    image: "/images/image-5.jpg",
+  },
+  {
+    id: 6,
+    image: "/images/image-6.jpg",
+  },
+];
+
+
+
 
 export function GallerySection() {
   const [isPlaying, setIsPlaying] = useState(false);
-  const [images, setImages] = useState([]);
+  //const [images, setImages] = useState([]);
 
-  useEffect(() => {
+  {
+
+    /*
+
+      useEffect(() => {
     async function loadGallery() {
       const data = await getGallery();
       console.log("Gallery API response:", data);
@@ -19,6 +54,12 @@ export function GallerySection() {
     }
     loadGallery();
   }, []);
+
+
+    */
+  }
+
+ 
 
   return (
     <>
@@ -71,7 +112,7 @@ export function GallerySection() {
               <div className="grid grid-rows-[auto_1fr] gap-4">
                 <div className="relative rounded-lg overflow-hidden shadow-2xl h-full">
                   <img
-                    src="images/image13.jpg"
+                    src="images/thu-1.jpg"
                     alt=""
                     className="w-full h-96 object-cover"
                   />
@@ -110,7 +151,7 @@ export function GallerySection() {
               <iframe
                 width="100%"
                 height="100%"
-                src="https://www.youtube.com/embed/Du2e6dIw4Xw?autoplay=1"
+                src="https://www.youtube.com/embed/CgaEBJKosXQ"
                 title="Video"
                 frameBorder="0"
                 allowFullScreen
