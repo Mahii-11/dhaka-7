@@ -198,7 +198,7 @@ export default function Biography() {
                 transition={{ duration: 0.5 }}
               >
                 <img
-                  src="images/tariqueimage-7.jpg"
+                  src="images/tariqueimage-7.png"
                   alt="Candidate Portrait"
                   className="rounded-lg shadow-xl w-full max-w-md mx-auto"
                   data-testid="img-candidate-portrait"

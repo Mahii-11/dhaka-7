@@ -1,10 +1,10 @@
 /* eslint-disable no-unused-vars */
-import { Link } from "wouter";
 import { motion } from "framer-motion";
 import { FaFacebookF, FaYoutube, FaInstagram } from "react-icons/fa";
 import { FiLink } from "react-icons/fi";
 import { MapPin, Phone, Mail, Ribbon } from "lucide-react";
 import { Shield } from "lucide-react";
+import { MdLocationOn } from "react-icons/md";
 
 const socialLinks = [
   {
@@ -60,10 +60,9 @@ export function Footer() {
                   তারেক <span className="text-political-red">রহমান</span>
                 </div>
               </div>
-              <p className="text-gray-950 text-sm leading-relaxed mb-6">
-                পরিবর্তনের জন্য আমাদের আন্দোলনে যোগ দিন। একসাথে আমরা আমাদের
-                দেশের জন্য একটি উজ্জ্বল ভবিষ্যত গড়ে তুলতে পারি এবং স্থায়ী
-                ইতিবাচক প্রভাব সৃষ্টি করতে পারি।
+              <p className="text-gray-950 text-sm leading-relaxed justify-center mb-6">
+               ঢাকা-১৭-এর মানুষের জন্য কাজ করার অঙ্গীকার নিয়েই আজ আপনাদের সামনে দাঁড়িয়েছি।
+গুলশান, বনানী, বারিধারা ও ক্যান্টনমেন্ট এলাকার মানুষের স্বপ্ন, নিরাপত্তা, সম্মান এবং জীবনমান—এসবই আমার কাছে সর্বোচ্চ অগ্রাধিকার। আপনাদের ভালোবাসা, বিশ্বাস ও সমর্থন সবসময় আমাকে শক্তি দিয়েছে। এবার সরাসরি আপনাদের পাশে থেকে সেবা করার সুযোগ চাই।
               </p>
             </motion.div>
 
@@ -167,6 +166,12 @@ export function Footer() {
           <div className="border-t border-gray-200/50 mt-10 pt-6">
             <div className="flex flex-col md:flex-row items-center justify-center gap-4 text-sm text-gray-600">
               <p>© 2025 Tarique Rahman</p>
+               <div className="flex items-center gap-1 text-gray-700">
+               <MdLocationOn className="text-base -mt-[1px]" />
+                <span className="leading-tight">
+                 হাউজ: ৫৮, রোড: ১২, ব্লক–ই, বনানী, ঢাকা–১২১৩
+                 </span>
+                </div>
             </div>
           </div>
         </div>
